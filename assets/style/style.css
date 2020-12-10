@@ -14,16 +14,18 @@ body {
 h3 {
     color: #e5e5e5;
 }
-a h3:hover{
+
+a h3:hover {
     color: #fff;
 }
+
 a {
     text-decoration: none;
 }
 
 .wrapper {
     min-width: 1050px;
-    min-height:100%;
+    min-height: 100%;
     background-color: #141414;
 }
 
@@ -112,40 +114,46 @@ a {
     width: 100%;
 }
 
-.previewOverlay{
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.3);
-    position: absolute;
-}
-.previewContainer{
+.previewContainer {
     position: relative;
     display: flex;
 }
-.previewContainer.small{
+
+.previewContainer.small {
     width: 230px;
     height: 129px;
     margin-right: 4px;
     display: inline-flex;
 }
-.previewContainer.small img{
+
+.previewContainer.small img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.previewOverlay .mainDetails h3{
+
+.previewOverlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    position: absolute;
+}
+
+.previewOverlay .mainDetails h3 {
     color: #fff;
     font-size: 40px;
     margin: 15px 0;
 }
-.previewOverlay .mainDetails{
+
+.previewOverlay .mainDetails {
     position: relative;
     top: 35%;
     margin-left: 50px;
     display: flex;
     flex-direction: column;
 }
-.mainDetails button{
+
+.mainDetails button {
     background-color: rgba(51,51,51,0.4);
     color: #fff;
     border: none;
@@ -157,17 +165,19 @@ a {
     border-radius: 2px;
     margin-bottom: 15px;
     margin-right: 5px;
-    cursor:pointer;
-}
-.buttons i{
-    color: inherit;
-}
-.mainDetails button:hover{
-    background-color: #e6e6e6;
-    color: #000000;
+    cursor: pointer;
 }
 
-.category{
+button i {
+    color: inherit;
+}
+
+.mainDetails button:hover {
+    background-color: #e6e6e6;
+    color: #000;
+}
+
+.category {
     display: flex;
     flex-direction: column;
     padding: 10px 0;
@@ -180,11 +190,11 @@ a {
     white-space: nowrap;
 }
 
-
 .previewCategories {
     padding: 0 50px;
 }
-.errorBanner{
+
+.errorBanner {
     color: #fff;
     position: absolute;
     top: 25%;
@@ -192,36 +202,68 @@ a {
     text-align: center;
     font-size: 18px;
 }
-.season{
+
+.season {
     display: flex;
     flex-direction: column;
     padding: 10px 50px;
 }
+
 .episodeContainer {
     display: inline-flex;
     justify-content: center;
     margin-right: 4px;
 }
-.episodeContainer .contents{
+
+.episodeContainer .contents {
     display: flex;
     flex-direction: column;
     width: 230px;
 }
-.episodeContainer img{
+
+.episodeContainer img {
     width: 230px;
     height: 129px;
     object-fit: cover;
 }
+
 .episodeContainer .videoInfo h4,
-.episodeContainer .videoInfo span{
-    color: #ffffff;
+.episodeContainer .videoInfo span {
+    color: #fff;
     width: 100%;
     white-space: normal;
 }
-.episodeContainer .videoInfo{
+
+.episodeContainer .videoInfo {
     max-height: 200px;
     overflow-y: auto;
 }
-.previewCategories.noScroll .category .entities{
+
+.previewCategories.noScroll .category .entities {
     white-space: normal;
+}
+
+.watchContainer video {
+    width: 100%;
+}
+
+.videoControls {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.videoControls h1 {
+    color: #fff;
+}
+
+.videoControls button {
+    font-size: 50px;
+    padding: 50px;
+    color: #fff;
+    background-color: transparent;
+    border: none;
 }
