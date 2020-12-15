@@ -9,6 +9,37 @@ class PreviewProvider{
         $this -> username = $username;
     }
 
+    public function createCategroyPreviewVideo($categoryId)
+    {
+        $entitiesArray = EntityProvider::getEntities($this->con, $categoryId,1);
+        if(sizeof($entitiesArray) == 0){
+            ErrorMessage::show("No TV shows to display");
+        }
+
+        return $this->createPreviewVideo($entitiesArray[0]);
+    }
+
+    public function createTVShowPreviewVideo()
+    {
+        $entitiesArray = EntityProvider::getTVShowEntities($this->con, null,1);
+        if(sizeof($entitiesArray) == 0){
+            ErrorMessage::show("No TV shows to display");
+        }
+
+        return $this->createPreviewVideo($entitiesArray[0]);
+    }
+
+
+    public function createMoviePreviewVideo()
+    {
+        $entitiesArray = EntityProvider::getMoviesEntities($this->con, null,1);
+        if(sizeof($entitiesArray) == 0){
+            ErrorMessage::show("No movies to display");
+        }
+
+        return $this->createPreviewVideo($entitiesArray[0]);
+    }
+
     public function createPreviewVideo($entity) {
         if($entity == null){
             $entity = $this->getRandomEntity();
@@ -67,6 +98,7 @@ class PreviewProvider{
                 ";
 
     }
+
 
     private function getRandomEntity() {
 
